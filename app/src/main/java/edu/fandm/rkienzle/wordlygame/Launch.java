@@ -217,9 +217,10 @@ public class Launch extends AppCompatActivity {
     public void startGame(View v)
     {
         String s = this.startET.getText().toString();
+        String e = this.endET.getText().toString();
         if (s.length() == this.endET.getText().toString().length()) {
             if (s.length() != 0) {
-                new FindSolutionTask().execute(new String[]{s});
+                new FindSolutionTask().execute(new String[]{s, e});
                 return;
             }
         }
