@@ -234,6 +234,7 @@ public class Launch extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         findViewById(R.id.tv_loading).setVisibility(View.INVISIBLE);
+        //only shows explain page on the first run of the app.
         if (this.prefs.getBoolean("firstrun", true)) {
             this.prefs.edit().putBoolean("firstrun", false).commit();
             startActivity(new Intent(this.ctx, Explain.class));

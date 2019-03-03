@@ -327,7 +327,6 @@ public class Game extends AppCompatActivity {
     }
 
     public void guess(View v) {
-        final TextView tv = (TextView) v;
         final int curEmptySpot = getCurrentEmptySpot();
         Builder builder = new Builder(this);
         builder.setTitle("Guess a word");
@@ -359,7 +358,7 @@ public class Game extends AppCompatActivity {
                     Toast.makeText(access$000, stringBuilder.toString(), Toast.LENGTH_SHORT).show();
                 } else if (guess.equals(Game.this.soln.get(curEmptySpot))) {
                     Game.this.shown.set(curEmptySpot, guess);
-                    tv.setText(guess);
+                    Game.this.puzzle.setAdapter(new ArrayAdapter(Game.this, R.layout.cell, Game.this.shown.toArray(new String[Game.this.shown.size()])));
                     String str = Game.TAG;
                     StringBuilder stringBuilder2 = new StringBuilder();
                     stringBuilder2.append("shown: ");
