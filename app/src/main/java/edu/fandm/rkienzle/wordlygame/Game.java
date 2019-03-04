@@ -106,11 +106,17 @@ public class Game extends AppCompatActivity {
                         in.close();
                         byte[] response = out.toByteArray();
                         Game.this.bitmaps[idx] = BitmapFactory.decodeByteArray(response, 0, response.length);
+                        Log.d(TAG, "Length of bitmaps: " + Game.this.bitmaps.length);
+                        Log.d(TAG, "Location of bitmaps: " + Game.this.bitmaps.toString());
+                        Log.d(TAG, "bitmap[0]: " + Game.this.bitmaps[0]);
+                        Log.d(TAG, "bitmaps[1]: " + Game.this.bitmaps[1]);
+                        Log.d(TAG, "bitmaps[2]: " + Game.this.bitmaps[2]);
+
                         return;
                     }
                 }
             } catch (IOException ioe) {
-                ioe.printStackTrace();
+                Log.d(TAG, "IO Exception on downloadImageFromURL");
             }
         }
 
@@ -241,40 +247,41 @@ public class Game extends AppCompatActivity {
         }
 
         private void animatedImageSwitch() {
-            Animation anim_out = AnimationUtils.loadAnimation(Game.this.ctx, R.anim.fadeout);
-            final Animation anim_in = AnimationUtils.loadAnimation(Game.this.ctx, R.anim.fadein);
-            anim_out.setDuration(1500);
-            anim_out.setAnimationListener(new AnimationListener() {
-
-                /* renamed from: edu.fandm.enovak.wordly.Game$ImageSlideShowThread$2$1 */
-                class C03071 implements AnimationListener {
-                    C03071() {
-                    }
-
-                    public void onAnimationStart(Animation animation) {
-                        Game.this.hintIV.setVisibility(View.VISIBLE);
-                    }
-
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-
-                    public void onAnimationEnd(Animation animation) {
-                    }
-                }
+            Animation anim_blink = AnimationUtils.loadAnimation(Game.this.ctx, R.anim.blink);
+            anim_blink.setDuration(2500);
+            anim_blink.setAnimationListener(new AnimationListener() {
 
                 public void onAnimationStart(Animation animation) {
+                    findNextValidPhoto();
+                    Game.this.hintIV.setImageBitmap(Game.this.bitmaps[ImageSlideShowThread.this.cur]);
+                    Log.d(TAG, "this.cur " + ImageSlideShowThread.this.cur);
+                    Log.d(TAG, "this.bitmap: " + Game.this.bitmaps.toString());
+                    Log.d(TAG, "bitmap: " + bitmaps.toString());
+                    Game.this.hintIV.setVisibility(View.VISIBLE);
                 }
 
                 public void onAnimationRepeat(Animation animation) {
                 }
 
                 public void onAnimationEnd(Animation animation) {
-                    Game.this.hintIV.setImageBitmap(Game.this.bitmaps[ImageSlideShowThread.this.cur]);
-                    anim_in.setAnimationListener(new C03071());
-                    Game.this.hintIV.startAnimation(anim_in);
                 }
             });
-            Game.this.hintIV.startAnimation(anim_out);
+            Game.this.hintIV.startAnimation(anim_blink);
+        }
+
+        private void findNextValidPhoto()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                if(Game.this.bitmaps[ImageSlideShowThread.this.cur] != null)
+                {
+                    return;
+                }
+                else
+                {
+                    ImageSlideShowThread.this.cur = (ImageSlideShowThread.this.cur + 1) % 3;
+                }
+            }
         }
     }
 
