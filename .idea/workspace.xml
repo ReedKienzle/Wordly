@@ -18,23 +18,10 @@
         <option name="packageNamePattern" value="" />
         <option name="pid" value="" />
       </filter>
-      <filter>
-        <option name="logLevel" value="verbose" />
-        <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="enovak.Game" />
-        <option name="name" value="game" />
-        <option name="packageNamePattern" value="" />
-        <option name="pid" value="" />
-      </filter>
     </filters>
   </component>
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="game" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -47,18 +34,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/blink.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/anim/blink.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/fadein.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/fadeout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,11 +60,11 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="Launch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2955">
+            <state relative-caret-position="-116">
               <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
             </state>
           </provider>
@@ -102,32 +82,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="281" column="91" selection-start-line="281" selection-start-column="91" selection-end-line="281" selection-end-column="91" />
+            <state relative-caret-position="249">
+              <caret line="270" column="65" selection-start-line="270" selection-start-column="65" selection-end-line="270" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blink.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/blink.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="93" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_game.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_game.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fadein.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadein.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fadeout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadeout.xml">
+          <provider selected="true" editor-type-id="text-editor">
             <state />
           </provider>
         </entry>
@@ -141,10 +124,6 @@
       <find>FindSolutionTask</find>
       <find>e</find>
       <find>anim</find>
-      <find>hintIV</find>
-      <find>ImageDown</find>
-      <find>bitmaps</find>
-      <find>cur</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2412,8 +2391,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/PositiveRandom.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/WordGraph.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/blink.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java" />
       </list>
     </option>
@@ -2428,13 +2405,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="Wordly" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Wordly" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Wordly" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="wordlygame" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="Wordly" type="1abcf292:AndroidViewProjectNode" />
@@ -2447,12 +2435,18 @@
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="anim" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
+            <path>
+              <item name="Wordly" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="ProjectPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2592,36 +2586,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="845" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32959327" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.501287" side_tool="true" weight="0.32867134" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.18597169" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.501287" side_tool="true" weight="0.32867134" />
+      <window_info active="true" anchor="right" id="Preview" visible="true" weight="0.18597169" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32959327" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32959327" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="10" sideWeight="0.4993565" visible="true" weight="0.32819074" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.4993565" visible="true" weight="0.32959327" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24967825" />
-      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.498713" weight="0.32819074" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.498713" weight="0.32867134" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -2629,164 +2624,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/PositiveRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadeout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadein.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3015">
-          <caret line="245" column="39" lean-forward="true" selection-start-line="245" selection-start-column="39" selection-end-line="245" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/PositiveRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadeout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadein.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4065">
-          <caret line="315" column="49" selection-start-line="315" selection-start-column="49" selection-end-line="315" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/PositiveRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadeout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadein.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="276" column="54" lean-forward="true" selection-start-line="276" selection-start-column="54" selection-end-line="276" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/PositiveRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="270" column="65" selection-start-line="270" selection-start-column="65" selection-end-line="270" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadein.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fadeout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/WordGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1515">
           <caret line="101" column="50" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
+          <folding>
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2804,6 +2649,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1110">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2817,6 +2666,13 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/PositiveRandom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -2824,13 +2680,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="219" column="51" selection-start-line="219" selection-start-column="51" selection-end-line="219" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -2844,28 +2693,19 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="249">
+          <caret line="270" column="65" selection-start-line="270" selection-start-column="65" selection-end-line="270" selection-end-column="65" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/blink.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="93" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/fandm/rkienzle/wordlygame/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="281" column="91" selection-start-line="281" selection-start-column="91" selection-end-line="281" selection-end-column="91" />
-        </state>
+        <state />
       </provider>
     </entry>
   </component>
