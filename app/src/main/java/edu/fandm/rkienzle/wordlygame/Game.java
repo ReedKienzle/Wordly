@@ -306,6 +306,7 @@ public class Game extends AppCompatActivity {
         stringBuilder2.append("\n");
         Log.d(str2, stringBuilder2.toString());
         this.soln = launchIntent.getStringArrayListExtra("solution");
+        Log.d(TAG, "this.soln.get(0).length: " + this.soln.get(0).length());
         str2 = TAG;
         stringBuilder2 = new StringBuilder();
         stringBuilder2.append("solution: ");
@@ -354,8 +355,8 @@ public class Game extends AppCompatActivity {
 
             public void onClick(DialogInterface dialog, int which) {
                 String guess = input.getText().toString();
-                if (guess.length() != 4) {
-                    Toast.makeText(Game.this.ctx, "That word is not four letters long!", Toast.LENGTH_SHORT).show();
+                if (guess.length() != Game.this.soln.get(0).length()) {
+                    Toast.makeText(Game.this.ctx, "That word is not the correct length!", Toast.LENGTH_SHORT).show();
                 } else if (!WordGraph.oneLetterDiff((String) Game.this.soln.get(curEmptySpot - 1), guess)) {
                     Context access$000 = Game.this.ctx;
                     StringBuilder stringBuilder = new StringBuilder();
