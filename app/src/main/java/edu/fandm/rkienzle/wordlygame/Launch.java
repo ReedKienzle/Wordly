@@ -241,6 +241,10 @@ public class Launch extends AppCompatActivity {
         }
     }
 
+    public void showExplain(View v){
+        startActivity(new Intent(this.ctx, Explain.class));
+    }
+
     private WordGraph buildGraph(int len) throws IOException {
         if (this.wg != null && this.wg.getRandomWord().length() == len) {
             return this.wg;
