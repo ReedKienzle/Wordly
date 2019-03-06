@@ -14,22 +14,22 @@ public class MainMenu extends AppCompatActivity {
     }
     public void GoEasy(View v)
     {
-        Intent intent = new Intent(this, Game.class);
+        Intent intent = new Intent(this, Launch.class);
         startActivity(intent);
     }
     public void GoNormal(View v)
     {
-        Intent intent = new Intent(this, Game.class);
+        Intent intent = new Intent(this, Launch.class);
         startActivity(intent);
     }
     public void GoHard(View v)
     {
-        Intent intent = new Intent(this, Game.class);
+        Intent intent = new Intent(this, Launch.class);
         startActivity(intent);
     }
     public void GoCustom(View v)
     {
-        Intent intent = new Intent(this, Game.class);
+        Intent intent = new Intent(this, Launch.class);
         startActivity(intent);
     }
 }
