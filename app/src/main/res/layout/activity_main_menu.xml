@@ -30,6 +30,7 @@
         android:layout_marginBottom="492dp"
         android:background="@drawable/but1"
         android:shadowColor="#A8A8A8"
+        android:onClick="GoEasy"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
@@ -54,6 +55,7 @@
         android:shadowRadius="5"
         android:text="Normal"
         android:textColor="#000000"
+        android:onClick="GoNormal"
 
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,6 +76,7 @@
         android:text="Hard"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:onClick="GoHard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -90,6 +93,7 @@
         android:shadowDy="0"
         android:shadowRadius="5"
         android:text="Custom"
+        android:onClick="GoCustom"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
