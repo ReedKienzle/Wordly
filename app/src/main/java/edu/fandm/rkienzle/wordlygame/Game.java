@@ -172,7 +172,7 @@ public class Game extends AppCompatActivity {
                         return null;
                     }
 
-                    for(int cnt = 0; i < 3; i++) {
+                    for(int cnt = 0; cnt < 3; cnt++) {
                         Log.d(str, "Downlodaing image from URL: " + arr.getJSONObject(cnt).toString());
                         downloadImageFromURL(arr.getJSONObject(cnt).getString("webformatURL"), cnt);
                     }
