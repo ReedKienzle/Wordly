@@ -31,6 +31,7 @@ public class Launch extends AppCompatActivity {
     private SharedPreferences prefs;
     private EditText startET;
     private WordGraph wg;
+    String difficulty;
 
     /* renamed from: edu.fandm.enovak.wordly.Launch$1 */
     class C03091 implements TextWatcher {
@@ -38,6 +39,14 @@ public class Launch extends AppCompatActivity {
         }
 
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            if(difficulty.equals("e") || difficulty.equals("m") || difficulty.equals("h")){
+                Launch.this.startET.setEnabled(false);
+                Launch.this.endET.setEnabled(false);
+            }
+            else{
+                Launch.this.startET.setEnabled(true);
+                Launch.this.endET.setEnabled(true);
+            }
         }
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -135,14 +144,19 @@ public class Launch extends AppCompatActivity {
             this.tv.animate();
         }
 
-        private String genSequence(String start, int SEQ_LEN) throws IllegalStateException {
+        private String genSequence(String start, String difficulty) throws IllegalStateException {
+            HashMap<String, Integer> changes = new HashMap<>();
+            changes.put("e", 3);
+            changes.put("m", 4);
+            changes.put("h", 5);
+            changes.put("c", 3);
             HashMap<String, Boolean> marked = new HashMap();
             marked.put(start, Boolean.valueOf(true));
             int hops = 0;
             LinkedList<String> curRound = new LinkedList();
             curRound.push(start);
             LinkedList<String> nextRound = new LinkedList();
-            while (hops < SEQ_LEN) {
+            while (hops < changes.get(difficulty)) {
                 Iterator it = curRound.iterator();
                 while (it.hasNext()) {
                     Iterator it2 = Launch.this.wg.getNeighbors((String) it.next()).iterator();
@@ -161,7 +175,7 @@ public class Launch extends AppCompatActivity {
                 } else {
                     StringBuilder stringBuilder = new StringBuilder();
                     stringBuilder.append("Cannot find a sequence of len: ");
-                    stringBuilder.append(SEQ_LEN);
+                    stringBuilder.append(changes.get(difficulty));
                     throw new IllegalStateException(stringBuilder.toString());
                 }
             }
@@ -177,7 +191,7 @@ public class Launch extends AppCompatActivity {
             while (startAndEnd[1] == null) {
                 startAndEnd[0] = wg.getRandomWord();
                 try {
-                    startAndEnd[1] = genSequence(startAndEnd[0], 3);
+                    startAndEnd[1] = genSequence(startAndEnd[0], difficulty);
                 } catch (IllegalStateException ise) {
                     Log.d(Launch.TAG, ise.getMessage());
                     String str = Launch.TAG;
@@ -204,6 +218,8 @@ public class Launch extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+        Intent menuIntent = getIntent();
+        difficulty = menuIntent.getStringExtra("difficulty");
         this.ctx = getApplicationContext();
         this.startET = (EditText) findViewById(R.id.et_start);
         this.endET = (EditText) findViewById(R.id.et_end);

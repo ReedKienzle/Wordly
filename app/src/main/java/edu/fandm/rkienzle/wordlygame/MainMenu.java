@@ -11,7 +11,7 @@ import org.w3c.dom.Text;
 
 public class MainMenu extends AppCompatActivity {
     TextView t;
-
+    String difficulty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,24 +19,32 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         t = (TextView) findViewById(R.id.Choose);
     }
-    public void GoEasy(View v)
-    {
+
+    public void GoEasy(View v) {
+        difficulty = "e";
         Intent intent = new Intent(this, Launch.class);
+        intent.putExtra("difficulty", difficulty);
         startActivity(intent);
     }
-    public void GoNormal(View v)
-    {
+
+    public void GoNormal(View v) {
+        difficulty = "m";
         Intent intent = new Intent(this, Launch.class);
+        intent.putExtra("difficulty", difficulty);
         startActivity(intent);
     }
-    public void GoHard(View v)
-    {
+
+    public void GoHard(View v) {
+        difficulty = "h";
         Intent intent = new Intent(this, Launch.class);
+        intent.putExtra("difficulty", difficulty);
         startActivity(intent);
     }
-    public void GoCustom(View v)
-    {
+
+    public void GoCustom(View v) {
+        difficulty = "c";
         Intent intent = new Intent(this, Launch.class);
+        intent.putExtra("difficulty", difficulty);
         startActivity(intent);
     }
 }

@@ -193,11 +193,11 @@ public class Game extends AppCompatActivity {
                 catch (IOException ioe) {}
             } catch (IOException ioe2) {
                 ioe2.printStackTrace();
-                try
+                /*try
                 {
                     reader.close();
                 }
-                catch (IOException ioe) {}
+                catch (IOException ioe) {}*/
             } catch (Throwable th) {
                 if (reader != null) {
                     try {
