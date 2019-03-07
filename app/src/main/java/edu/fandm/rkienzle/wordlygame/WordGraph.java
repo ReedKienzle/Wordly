@@ -90,6 +90,12 @@ class WordGraph {
 
     public ArrayList<String> getNeighbors(String word) {
         ArrayList<String> neighbors = new ArrayList();
+
+        if(getNodeIDX(word) == -1)
+        {
+            return neighbors;
+        }
+
         ArrayList<Boolean> row = (ArrayList) this.edges.get(getNodeIDX(word));
         for (int i = 0; i < row.size(); i++) {
             if (((Boolean) row.get(i)).booleanValue()) {
@@ -100,6 +106,12 @@ class WordGraph {
     }
 
     public String getRandomNeighbor(String word) {
+
+        if(getNodeIDX(word) == -1)
+        {
+            return null;
+        }
+
         ArrayList<Boolean> row = (ArrayList) this.edges.get(getNodeIDX(word));
         int outIDX = PositiveRandom.nextInt(row.size());
         while (!((Boolean) row.get(outIDX)).booleanValue()) {
