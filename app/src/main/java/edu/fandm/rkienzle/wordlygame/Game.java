@@ -92,6 +92,7 @@ public class Game extends AppCompatActivity {
         }
 
         private void downloadImageFromURL(String URL, int idx) {
+
             try {
                 InputStream in = new BufferedInputStream(new URL(URL).openStream());
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -101,6 +102,7 @@ public class Game extends AppCompatActivity {
                     int n = read;
                     if (-1 != read) {
                         out.write(buf, 0, n);
+                        Log.d(TAG, "Not reading URL!");
                     } else {
                         out.close();
                         in.close();
@@ -132,7 +134,7 @@ public class Game extends AppCompatActivity {
             try {
                 String readLine;
                 StringBuilder stringBuilder2 = new StringBuilder();
-                stringBuilder2.append("https://pixabay.com/api/?key=10898531-392d5bb44bdda418e54650675&q=");
+                stringBuilder2.append("https://pixabay.com/api/?key=11817711-9f7b7a12fef1839f0ff0742c1&q=");
                 stringBuilder2.append(keyword);
                 HttpURLConnection con = (HttpURLConnection) new URL(stringBuilder2.toString()).openConnection();
                 con.setRequestMethod("GET");
@@ -165,15 +167,15 @@ public class Game extends AppCompatActivity {
                         try {
                             reader.close();
                         } catch (IOException ioe) {
-                            //i2.printStackTrace();
+                            Log.d(str2, "IOException on doinBackground");
                         }
                         return null;
                     }
-                    //while (i2 < 3) {
-                        downloadImageFromURL(arr.getJSONObject(0).getString("webformatURL"), 0);
-                        //downloadImageFromURL(arr.getJSONObject(i2).getString("webformatURL"), i2);
-                        //i2++;
-                   // }
+
+                    for(int cnt = 0; i < 3; i++) {
+                        Log.d(str, "Downlodaing image from URL: " + arr.getJSONObject(cnt).toString());
+                        downloadImageFromURL(arr.getJSONObject(cnt).getString("webformatURL"), cnt);
+                    }
                     try {
                         reader.close();
                     } catch (IOException ioe) {
@@ -193,11 +195,6 @@ public class Game extends AppCompatActivity {
                 catch (IOException ioe) {}
             } catch (IOException ioe2) {
                 ioe2.printStackTrace();
-                /*try
-                {
-                    reader.close();
-                }
-                catch (IOException ioe) {}*/
             } catch (Throwable th) {
                 if (reader != null) {
                     try {
@@ -253,11 +250,28 @@ public class Game extends AppCompatActivity {
 
                 public void onAnimationStart(Animation animation) {
                     findNextValidPhoto();
-                    Game.this.hintIV.setImageBitmap(Game.this.bitmaps[ImageSlideShowThread.this.cur]);
+                    ImageView view  = (ImageView) findViewById(R.id.game_iv_hint);
+
+                    try {
+                        Bitmap bitmap2 = Bitmap.createScaledBitmap(Game.this.bitmaps[ImageSlideShowThread.this.cur],  600 ,600, true);//this bitmap2 you can use only for display
+                        view.setImageBitmap(bitmap2); //trying full image
+                    } catch (Exception e) {
+                        Log.d(TAG, "Error with bitmap scaling");
+                        view.setImageBitmap(Game.this.bitmaps[ImageSlideShowThread.this.cur]);
+                    }
+
+
+                    //view.setImageBitmap(Game.this.bitmaps[ImageSlideShowThread.this.cur]);
                     Log.d(TAG, "this.cur " + ImageSlideShowThread.this.cur);
                     Log.d(TAG, "this.bitmap: " + Game.this.bitmaps.toString());
-                    Log.d(TAG, "bitmap: " + bitmaps.toString());
-                    Game.this.hintIV.setVisibility(View.VISIBLE);
+                    Log.d(TAG, "bitmap[0]: " + bitmaps[0]);
+                    Log.d(TAG, "bitmap[1]: " + bitmaps[1]);
+                    Log.d(TAG, "bitmap[2]: " + bitmaps[2]);
+
+                    Log.d(TAG, "Game.this.bitmap[0]: " + Game.this.bitmaps[0]);
+                    Log.d(TAG, "Game.this.bitmap[1]: " + Game.this.bitmaps[1]);
+                    Log.d(TAG, "Game.this.bitmap[2]: " + Game.this.bitmaps[2]);
+                    //view.setVisibility(View.VISIBLE);
                 }
 
                 public void onAnimationRepeat(Animation animation) {
@@ -266,7 +280,8 @@ public class Game extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                 }
             });
-            Game.this.hintIV.startAnimation(anim_blink);
+            ImageView view  = (ImageView) findViewById(R.id.game_iv_hint);
+            view.startAnimation(anim_blink);
         }
 
         private void findNextValidPhoto()
