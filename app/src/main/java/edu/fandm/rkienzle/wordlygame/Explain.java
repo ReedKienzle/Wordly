@@ -8,7 +8,7 @@ public class Explain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explain);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
     }
 
     public void letsgo(View v) {

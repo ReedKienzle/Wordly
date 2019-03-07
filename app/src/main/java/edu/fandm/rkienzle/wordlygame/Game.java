@@ -59,7 +59,7 @@ public class Game extends AppCompatActivity {
             }
 
             public void run() {
-                Game.this.hide(null);
+                //Game.this.hide(null);
             }
         }
 
@@ -193,11 +193,11 @@ public class Game extends AppCompatActivity {
                 catch (IOException ioe) {}
             } catch (IOException ioe2) {
                 ioe2.printStackTrace();
-                try
+                /*try
                 {
                     reader.close();
                 }
-                catch (IOException ioe) {}
+                catch (IOException ioe) {}*/
             } catch (Throwable th) {
                 if (reader != null) {
                     try {
@@ -398,7 +398,7 @@ public class Game extends AppCompatActivity {
 
     protected void onResume() {
         super.onResume();
-        hide(null);
+        //hide(null);
         new ImageDownloader().execute(new String[]{(String) this.soln.get(1)});
     }
 

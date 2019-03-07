@@ -1,20 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:id="@+id/ll_inputs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">
-        <EditText android:gravity="center" android:id="@+id/et_start" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:hint="Start Word" android:maxLength="7" />
-        <EditText android:gravity="center" android:id="@+id/et_end" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:hint="End Word" />
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backchitthat">
+
+    <LinearLayout
+        android:id="@+id/ll_inputs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50.0dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_start"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:gravity="center"
+            android:hint="Start Word"
+            android:maxLength="7" />
+
+        <EditText
+            android:id="@+id/et_end"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:gravity="center"
+            android:hint="End Word" />
     </LinearLayout>
-    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_random" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/ll_inputs">
-        <Button android:id="@+id/butt_random" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0dip" android:minHeight="1.0dip" android:text="New Puzzle" android:onClick="genGame" />
-        <Button android:textColor="#ff46893d" android:id="@+id/butt_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:minWidth="1.0dip" android:minHeight="1.0dip" android:text="PLAY" android:onClick="startGame" />
+
+    <LinearLayout
+        android:id="@+id/ll_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_inputs">
+
+        <Button
+            android:id="@+id/butt_random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="1.0dip"
+            android:minHeight="1.0dip"
+            android:onClick="genGame"
+            android:text="New Puzzle" />
+
+        <Button
+            android:id="@+id/butt_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:minWidth="1.0dip"
+            android:minHeight="1.0dip"
+            android:onClick="startGame"
+            android:text="PLAY"
+            android:textColor="#ff46893d" />
     </LinearLayout>
-    <TextView android:textSize="18.0sp" android:textColor="#ff505050" android:id="@+id/tv_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="2.0dip" android:text="thinking..." app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ll_random" />
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginBottom="2.0dip"
+        android:text="thinking..."
+        android:textColor="#ff505050"
+        android:textSize="18.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_random" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Explaination"
         android:onClick="showExplain"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:text="Explaination"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>
