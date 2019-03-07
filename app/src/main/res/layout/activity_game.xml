@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/all"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -28,6 +29,7 @@
         android:layout_marginRight="2.0dip"
         android:background="@drawable/backchitthat"
         android:elevation="6.0dip"
+        android:textColor="#000000"
         android:gravity="center"
         android:paddingTop="10.0dip"
         android:paddingBottom="10.0dip"
@@ -38,11 +40,21 @@
 
     <Button
         android:id="@+id/game_butt_hint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="154dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/but2"
         android:onClick="hint"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:text="hint"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />/>
 
 </android.support.constraint.ConstraintLayout>

@@ -19,6 +19,9 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         t = (TextView) findViewById(R.id.Choose);
     }
+    public void showExplain(View v){
+        startActivity(new Intent(this, Explain.class));
+    }
 
     public void GoEasy(View v) {
         difficulty = "e";
