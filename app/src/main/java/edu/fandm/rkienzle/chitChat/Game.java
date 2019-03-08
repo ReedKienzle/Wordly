@@ -395,7 +395,7 @@ public class Game extends AppCompatActivity {
                         Game.this.endSlideShow();
                         ((Button) Game.this.findViewById(R.id.game_butt_hint)).setVisibility(View.INVISIBLE);
                         Game.this.hintIV.setVisibility(View.VISIBLE);
-                        Game.this.hintIV.setImageResource(R.drawable.star);
+                        Game.this.hintIV.setImageResource(R.drawable.star1);
                         Game.this.hintIV.setAnimation(AnimationUtils.loadAnimation(Game.this.ctx, R.anim.spin));
                         Game.this.hintIV.animate();
                         Game.this.hintIV.setOnClickListener(new C03031());
