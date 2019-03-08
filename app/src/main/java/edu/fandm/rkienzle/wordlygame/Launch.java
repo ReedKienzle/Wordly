@@ -95,11 +95,18 @@ public class Launch extends AppCompatActivity {
                 cur = (String) q.remove();
                 marked.put(cur, Boolean.valueOf(true));
                 ArrayList<String> neighbors = wg.getNeighbors(cur);
-                for (int i = 0; i < neighbors.size(); i++) {
-                    if (!map.containsKey((String) neighbors.get(i))) {
-                        map.put(neighbors.get(i), cur);
-                        q.add(neighbors.get(i));
+
+                if(neighbors.size() > 0) {
+                    for (int i = 0; i < neighbors.size(); i++) {
+                        if (!map.containsKey((String) neighbors.get(i))) {
+                            map.put(neighbors.get(i), cur);
+                            q.add(neighbors.get(i));
+                        }
                     }
+                }
+                else
+                {
+                    return null;
                 }
             }
             ArrayList<String> soln = new ArrayList(2);
