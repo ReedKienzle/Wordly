@@ -1,4 +1,4 @@
-package edu.fandm.rkienzle.wordlygame;
+package edu.fandm.rkienzle.chitChat;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package edu.fandm.rkienzle.wordlygame;
+package edu.fandm.rkienzle.chitChat;
 
 import java.util.ArrayList;
 import java.util.Iterator;

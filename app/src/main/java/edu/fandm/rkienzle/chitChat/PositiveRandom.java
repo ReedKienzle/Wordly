@@ -1,4 +1,4 @@
-package edu.fandm.rkienzle.wordlygame;
+package edu.fandm.rkienzle.chitChat;
 
 //import android.support.v7.widget.ActivityChooserView.ActivityChooserViewAdapter;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package edu.fandm.rkienzle.wordlygame;
+package edu.fandm.rkienzle.chitChat;
 
 import org.junit.Test;
 

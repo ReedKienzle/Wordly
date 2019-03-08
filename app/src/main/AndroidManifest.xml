@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.fandm.rkienzle.wordlygame">
+    package="edu.fandm.rkienzle.chitChat">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Chit Chat"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Explain"
+            android:name="edu.fandm.rkienzle.chitChat.Explain"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Game"
+            android:name="edu.fandm.rkienzle.chitChat.Game"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Launch"
+            android:name="edu.fandm.rkienzle.chitChat.Launch"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainMenu"
+            android:name="edu.fandm.rkienzle.chitChat.MainMenu"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
